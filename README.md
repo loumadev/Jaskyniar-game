@@ -17,10 +17,10 @@ Miniprog 2022 – correspondence round
 
 ## Deployment
 
-1. Setup a simple web server of your choice serving static files
-2. Clone this repo to root directory of the server (or anywhere else, as you wish)
+1. Setup a simple web server of your choice serving the static files
+2. Clone this repo to root directory of your server (or anywhere else, as you wish)
 3. In your browser, navigate to `<host>/game.html` to get the game page
-4. Change the options according to your preference (or keep as default) and press the **"Start the game!"** button
+4. Change the options according to your preferences (or keep as default) and press the **"Start the game!"** button
 
 ## External dependencies
 This project is using:
