@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Miniprog 2022 - Korešpondenčné kolo</title>
+
+	<!-- General Purpose Libraries -->
+	<script src="https://loumadev.eu/JustLib.js"></script>
+	<!-- <script src="https://loumadev.eu/JustLibDraw.js"></script> -->
+	<script src="https://loumadev.eu/NeuralNetwork.js"></script>
+
+	<!-- Game Specific Files -->
+	<script src="Renderer.js"></script>
+	<script src="GameMap.js"></script>
+	<script src="MapObject.js"></script>
+	<script src="Navigation.js"></script>
+	<script src="Game.js"></script>
+	<script src="PlayerController.js"></script>
+	<script src="MapParser.js"></script>
+	<script src="Player.js"></script>
+	<script src="PlayerAI.js"></script>
+	<script src="PlayerAIv2.js"></script>
+	<script src="UI.js"></script>
+	<script src="Utils.js"></script>
+
+	<!-- Main entry -->
+	<script src="main.js" defer></script>
+</head>
+
+<body>
+	<main class="flex row">
+		<div class="screen">
+			<pre class="canvas main"></pre>
+		</div>
+		<div class="ui">
+			<div class="inventory flex row"></div>
+			<div class="monsters"></div>
+			<div class="arrows"></div>
+			<div class="navigation"></div>
+			<div class="log"></div>
+		</div>
+	</main>
+
+	<aside>
+		<div class="options">
+			<div class="player">
+				<h2>Player Options</h2>
+				<div class="item">
+					<select id="playerMode">
+						<option value="player" selected>Player</option>
+						<option value="ai_agent_v1">Neural AI Agent (v1 *broken*)</option>
+						<option value="ai_agent_v2">Algorithmic AI Agent (v2 *working*)</option>
+					</select>
+					<span>Player mode</span>
+				</div>
+				<div class="item">
+					<input type="number" id="ai_delay_main" min="20" step="10" max="1000" value="200">
+					<span>AI Player delay</span>
+				</div>
+				<div class="item">
+					<input id="renderHelper" type="checkbox">
+					<span>Render helper games</span>
+				</div>
+			</div>
+			<div class="mapOptions">
+				<h2>Map Options</h2>
+				<div class="item">
+					<select id="mapFile">
+						<option value="1.map" selected>1.map</option>
+						<option value="2.map">2.map</option>
+						<option value="3.map">3.map</option>
+						<option value="4.map">4.map</option>
+						<option value="5.map">5.map</option>
+						<option value="test_0.map">test_0.map</option>
+						<option value="test_1.map">test_1.map</option>
+						<option value="test_2.map">test_2.map</option>
+						<option value="test_3.map">test_3.map</option>
+						<option value="test_4.map">test_4.map</option>
+						<option value="test_5.map">test_5.map</option>
+						<option value="test_6.map">test_6.map</option>
+						<option value="test_7.map">test_7.map</option>
+						<option value="test_8.map">test_8.map</option>
+						<option value="test_debug_0.map">test_debug_0.map</option>
+						<option value="test_debug_1.map">test_debug_1.map</option>
+						<option value="test_debug_2.map">test_debug_2.map</option>
+						<option value="test_debug_3.map">test_debug_3.map</option>
+					</select>
+					<span>Game map</span>
+				</div>
+			</div>
+			<div id="renderOptions" class="rendering">
+				<h2>Rending Options</h2>
+				<div class="item">
+					<select id="renderMode">
+						<option value="basic">Basic</option>
+						<option value="raycast" selected>Raycast</option>
+					</select>
+					<span>Rendering mode</span>
+				</div>
+				<div class="item">
+					<input id="renderDistance" type="number" min="3" max="32" step="1" value="4">
+					<span>Render distance</span>
+				</div>
+				<div class="item">
+					<input id="viewDistance" type="number" min="1" max="16" step="1" value="3">
+					<span>View radius</span>
+				</div>
+				<div class="item">
+					<input id="alwaysDrawWalls" type="checkbox" checked>
+					<span>Always Draw Walls</span>
+				</div>
+				<div class="item">
+					<input id="drawRays" type="checkbox">
+					<span>Draw Rays</span>
+				</div>
+				<div class="item">
+					<input id="color" type="checkbox" checked>
+					<span>Use colors</span>
+				</div>
+			</div>
+			<class id="navigationOptions" class="navigation">
+				<h2>Navigation Options</h2>
+				<div class="item">
+					<select id="navigationMode">
+						<option value="1">Route</option>
+						<option value="2" selected>Direction</option>
+					</select>
+					<span>Navigation mode</span>
+				</div>
+			</class>
+		</div>
+
+		<div class="start">
+			<button id="start">Start the game!</button>
+		</div>
+	</aside>
+
+	<section class="helper-games"></section>
+</body>
+
+</html>
