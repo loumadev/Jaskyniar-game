@@ -31,7 +31,7 @@ This project is using:
 NOTE: All these libraries are created and maintained by me (LoumaDev), so technically it is not cheating.
 
 ## Online demo
-You can check online demo right now [here](http://loumadev.eu/miniprog/2022/kk/game.html) without need of setting up your own web server.
+You can check online demo right now [here](http://loumadev.eu/miniprog/2022/kk/game.html?_src=git) without need of setting up your own web server.
 
 ## Options
 Since the instructions contained multiple possibilities for the same functionalities, there are adjustable options available to the user:
