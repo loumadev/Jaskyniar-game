@@ -1,6 +1,9 @@
 # Jaskyniar game
 Miniprog 2022 – correspondence round
 
+## Final results (2022-05-18)
+* **2nd place 🥈🏆**
+
 ## Overview
 **NOTE**: The game does not contain any textures or any other "good looking" things. I found this competition on 27th of March and the deadline was on 31st same month, therefore there wasn't enough time for any additional stuff. All the required functionalities were successfully implemented (hopefully).
 
